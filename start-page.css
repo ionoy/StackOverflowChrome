@@ -1,0 +1,326 @@
+html
+{
+    font-family: Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif;
+}
+
+body
+{
+    padding: 0;
+    padding: 0;    
+}
+
+.themes, .themes select
+{
+    font-size: 0.8em;
+}
+
+.themes
+{
+    margin-left: 20px;
+}
+
+.show-toolbar
+{
+    position: absolute;
+    top: 3px;
+    right: 30px;
+    font-size: 0.8em;    
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.show-toolbar:hover
+{
+    text-decoration: none;
+}
+
+#other-sites
+{
+    display: none;
+    width: 900px;
+    padding: 20px;
+    position: absolute;    
+    background: #fff;
+    border: 1px solid #999;
+    -webkit-border-radius: 4px;    
+}
+
+#other-sites .show-meta, #other-sites .hide-meta
+{
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    font-size: 0.8em;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#other-sites .show-meta
+{
+    display: none;
+}
+
+#other-sites .hide
+{
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    font-size: 0.8em;
+    display: block;
+    text-decoration: underline;
+}
+
+#other-sites .hide:hover
+{
+    text-decoration: none;
+}
+
+#other-sites ul
+{
+    list-style: none;
+    overflow: hidden;
+    margin-top: 15px;
+    padding: 0;
+}
+
+#other-sites li
+{
+    float: left;
+    width: 450px;
+    cursor: pointer;
+}
+
+#other-sites li:hover span
+{
+    color: #085C12;
+}
+
+#other-sites li.visible span
+{
+    color: #0FA821;
+}
+
+#other-sites img
+{
+    width: 24px;
+    height: 24px;
+    display: block;
+    float: left;
+}
+
+#other-sites span
+{
+    font-size: 1.3em;
+    padding-left: 10px;
+}
+
+.sites
+{
+    overflow: hidden;
+}
+
+.so-site
+{
+    margin: 20px;
+    float: left;
+    -webkit-border-radius: 4px;
+    border: 1px solid #999;
+    padding: 4px 8px 0 8px;
+    width: 410px;
+    height: 420px;
+    max-height: 420px;
+    position: relative;
+}
+
+.so-site .header-container
+{
+    cursor: move;
+}
+
+.so-site .icon
+{
+    width: 40px;
+    height: 40px;
+}
+
+.so-site .hide
+{
+    display: block;
+    float: right;    
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.so-site .hide:hover
+{
+    color: #000;
+}
+
+.so-site .header
+{
+    position: absolute;
+    left: 55px;
+    top: 12px;
+    font-weight: bold;
+    font-size: 1.4em;
+    padding-left: 5px;
+    font-family: 'Trebuchet MS', 'Liberation Sans', 'DejaVu Sans', sans-serif;
+}
+
+.so-site .header.minimized
+{
+    font-size: 1.1em;
+}
+
+.so-site ul
+{
+    list-style: none;
+    font-size: 12px;
+    padding: 10px 0 0 0;
+    margin: 0px;
+}
+
+.so-site li
+{
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.so-site li a
+{
+    text-decoration: none;
+    color: #000;
+}
+
+.so-site li a:hover
+{
+    text-decoration: underline;
+}
+
+.so-site .answers-count
+{
+    float: left;
+    padding: 4px 5px;
+    font-size: 1.3em;
+    color: #fff;
+    background-color: #9A4444;
+    text-align: center;
+    margin-right: 5px;
+    width: 34px;
+}
+
+.so-site .answers-count.answered
+{
+    background-color: #75845C;
+}
+
+.so-site .answers-count div, .so-site .views-count
+{
+    font-size: 0.5em;
+}
+
+.so-site .tags
+{
+    margin: 4px 0;
+    overflow: hidden;
+    margin-left: 44px;
+}
+
+.so-site .tags.minimized
+{
+    font-size: 0.7em;
+}
+
+.so-site .tags span, .so-site .tag-list span
+{
+    display: block;
+    float: left;
+    margin-right: 6px;
+    margin-bottom: 5px;
+    padding: 2px 3px;
+    background-color: #eee;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.so-site .tags span:hover, .so-site .tag-list span:hover
+{
+    background-color: #E6E5C1;
+}
+
+.so-site .tag-list
+{
+    position: absolute;
+    bottom: 5px;
+    left: 7px;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.so-site .tag-list span
+{
+    display: inline;
+    float: none;    
+    font-weight: normal;
+}
+
+.so-site a
+{
+    color: #333;
+}
+
+.sort-list
+{
+    border-bottom: 1px solid #666;
+    height: 30px;
+}
+
+.sort-list img
+{
+    padding: 5px 15px;
+    -webkit-transform: rotate(0deg);
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 0.8s;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.sort-list .tabs
+{
+    float: right;
+    margin-right: 15px;
+}
+
+.sort-list .tabs span
+{   
+    display: block;
+    float: left;
+    padding: 0 8px;
+    line-height: 20px;
+    height: 25px;
+    margin: 5px 5px 0 0;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.sort-list .tabs span.selected
+{
+    font-weight: bold;
+    height: 29px;
+    line-height: 29px;
+    margin-top: 0px;
+    border: 1px solid #666;
+    border-bottom-color: #fff;
+}
+
+.sort-list .tabs span:hover:not(.selected)
+{
+    margin-top: 4px;
+    padding: 0 7px;
+    border: 1px solid #666;
+    border-bottom-color: #fff;
+}

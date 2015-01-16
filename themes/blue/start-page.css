@@ -1,0 +1,49 @@
+body
+{
+    background-color: #000000;
+	background-image: url("bg.gif")
+}
+
+.show-toolbar
+{
+	color: #fff;
+}
+
+.show-toolbar:hover
+{
+    text-decoration: none;
+}
+.so-site
+{
+	background: transparent;
+}
+.so-site .header
+{
+	color: #ffffff;
+}
+
+.so-site li a
+{
+    color: #fff;
+}
+
+.sort-list
+{
+    border-bottom: 1px solid #F6F6F6;
+}
+.sort-list .tabs span
+{   
+    background-color: #F6F6F6;
+}
+
+.sort-list .tabs span.selected
+{
+	border: 1px solid #F6F6F6;
+    background-color: transparent;
+	color: #fff;
+}
+
+.sort-list .tabs span:hover:not(.selected)
+{
+    border-bottom-color: #000;
+}

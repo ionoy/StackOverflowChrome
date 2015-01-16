@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>New Tab</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />       
+        <link rel="stylesheet" href="start-page.css" type="text/css" />
+        <link rel="stylesheet" href="lib/jquery-ui-1.8.4.custom.css" type="text/css" />        
+
+        <script type="text/javascript" src="lib/jquery-1.4.4.min.js"></script>
+        <script type="text/javascript" src="lib/soapi-2.js"></script>
+        <script type="text/javascript" src="sochrome.js"></script>
+
+        <script type="text/javascript">
+            SOChrome.setTheme(SOChrome.getOption('theme'));
+        </script>
+        
+        <script type="text/javascript" src="lib/jquery.tmpl.min.js"></script>
+        <script type="text/javascript" src="lib/jquery-ui-1.7.3.custom.min.js"></script>
+        <script type="text/javascript" src="ui.js"></script>
+    </head>
+    <body>
+        <div class="themes">
+            <select id="theme-selector">
+            	<option value="white">white</option>
+				<option value="gray">gray</option>
+                <option value="red">red</option>
+				<option value="blue">blue</option>
+				<option value="black">black</option>
+			</select>
+        </div>
+
+        <div class="show-toolbar">
+        	other sites
+        </div>
+        
+        <div class="sites"></div>
+
+        <script id="site-template" type="text/html">
+        	<div class="so-site ui-widget-content">
+                <div class="header-container">
+                	<img class="icon" src="http:${icon_url}" alt="${name}" />
+                	<span class="header {{if name.length > 25 }}minimized{{/if}}">
+                		${name}
+                	</span>
+                	<span class="hide">
+                		hide
+                	</span>
+                </div>
+                <div class="sort-list">
+                    <img src="refresh.png" alt="refresh" class="refresh" />
+                    <div class="tabs">
+                		<span class="selected" data-sort="activity">
+                			activity
+                		</span>
+	                    <span data-sort="creation">
+                			date
+                		</span>
+                		<span data-sort="hot">
+                		    hot
+                		</span>
+                		<span data-sort="week">
+                		    week
+                		</span>
+                	</div>
+                </div>
+                <ul></ul>
+                <div class="tag-list"></div>
+		    </div>
+        </script>
+        
+        <script id="question-template" type="text/html">
+        	<li>
+                <div class="answers-count {{if answer_count > 0}}answered{{/if}}">
+                	${answer_count}
+                    <div>
+                        {{if answer_count != 1}}
+                    	answers
+                        {{else}}
+                        answer
+                        {{/if}}
+                    </div>
+                </div>
+        		<a href="${site_url}${question_answers_url}">
+        			${title}
+        		</a>
+                <div class="tags">
+                	{{each tags}}
+                	<span>
+                		${$value}
+                	</span>
+                	{{/each}}
+                </div>
+        	</li>
+        </script>
+
+        <script id="other-site-template" type="text/html">
+            <li class='{{if visible }}visible{{/if}}'>
+                <img src="http:${icon_url}" alt="${name}"/>
+                <span>
+                    ${name}
+                </span>
+            </li>
+        </script>
+
+        <div id="other-sites">
+            <span class="hide-meta">
+            	hide 'meta' sites
+            </span>
+            <span class="show-meta">
+            	show 'meta' sites
+            </span>
+            <span class="hide">
+            	close
+            </span>
+            <ul>
+            </ul>
+        </div>
+
+        <script type="text/javascript" src="startup.js"></script>
+    </body>
+</html>
+
